@@ -1,8 +1,9 @@
 - hosts: terraform-ansible
   tasks:
-    - name: criação do arquivo
-      copy:
-        dest: /home/ubuntu/index.html
-        content: <h1>Top 10 arquivos
-    - name: criação do servidor
-      shell: "nohup busybox httpd -f -p 8080 &"
+    - name: Instalando o python3, virtualenv
+      apt:
+        pkg:
+        - python3
+        - virtualenv
+        update_cache: yes
+      become: yes

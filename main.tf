@@ -24,6 +24,6 @@ resource "aws_instance" "app_server" {
   #                       nohup busybox httpd -f -p 8090 &
   #                 EOF
   tags = {
-    Name = "teste aws"
+    Name = "Terraform Ansible Python"
   }
 }
